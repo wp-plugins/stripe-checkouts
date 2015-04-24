@@ -11,7 +11,7 @@
  * Plugin Name:       Simple Stripe Checkout Companion
  * Plugin URI:        http://kylembrown.com/stripe-checkout-pro-addon
  * Description:       The Stripe Checkout Pro Companion add-on makes is easy to insert shortcodes into your WordPress editor post and pages.
- * Version:           1.2.5
+ * Version:           1.2.6
  * Author:            Kyle M. Brown
  * Author URI:        http://kylembrown.com/stripe-checkout-pro-companion
  * Text Domain:       simple-stripe-checkout-companion

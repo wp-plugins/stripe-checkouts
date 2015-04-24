@@ -2,7 +2,7 @@
 Contributors: kmb40
 Tags: stripe, stripe checkout, simple stripe checkout, ecommerce, e-commerce
 Requires at least: 3.8.5
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -91,6 +91,11 @@ There are three ways to install this plugin.
 5. Viola! Your done in minutes
 
 == Changelog ==
+
+= 1.2.6 =
+
+* Tested with 4.2.
+
 
 = 1.2.5 =
 
