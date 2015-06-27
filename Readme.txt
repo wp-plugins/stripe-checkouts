@@ -92,6 +92,10 @@ There are three ways to install this plugin.
 
 == Changelog ==
 
+= 1.2.7 =
+
+* Added links; help and upgrade
+
 = 1.2.6 =
 
 * Tested with 4.2.

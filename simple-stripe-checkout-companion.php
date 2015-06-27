@@ -9,9 +9,9 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Simple Stripe Checkout Companion
- * Plugin URI:        http://kylembrown.com/stripe-checkout-pro-addon
+ * Plugin URI:        http://kylembrown.com/stripe-checkout-pro-companion
  * Description:       The Stripe Checkout Pro Companion add-on makes is easy to insert shortcodes into your WordPress editor post and pages.
- * Version:           1.2.6
+ * Version:           1.2.7
  * Author:            Kyle M. Brown
  * Author URI:        http://kylembrown.com/stripe-checkout-pro-companion
  * Text Domain:       simple-stripe-checkout-companion
@@ -40,6 +40,18 @@ function install_stripe_companion(){
 	add_action('admin_menu', 'wpautop_control_menu');		
 			
 }
+
+/* Upgrade to Pro Menu */
+
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sscc_plugin_action_links' );
+
+function sscc_plugin_action_links( $links ) {
+   $links[] = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=gpaisr') ) .'">Settings</a>';
+  $links[] = '<a href="http://www.kylembrown.com/stripe-checkout-pro-companion-help?utm_source=wordpress_org&utm_medium=plugin_upgrade_link&utm_campaign=simple_stripe_checkout_companion" target="_blank">Help</a>'; 
+  $links[] = '<a href="http://www.kylembrown.com/stripe-checkout-pro-companion?utm_source=wordpress_org&utm_medium=plugin_upgrade_link&utm_campaign=simple_stripe_checkout_companion" target="_blank">Upgrade to Pro</a>';
+   return $links;
+}
+
 function wpautop_control_menu()
 {
   add_submenu_page('stripe-checkout', 'Companion', 'Companion', 'manage_options', 'stripe-checkout-pro-companion', 'scpc_page_kyle');	 
