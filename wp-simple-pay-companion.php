@@ -8,13 +8,13 @@
  * @copyright 2014 Kyle M. Brown
  *
  * @wordpress-plugin
- * Plugin Name:       Simple Stripe Checkout Companion
+ * Plugin Name:       WP Simple Pay Lite for Stripe Companion
  * Plugin URI:        http://kylembrown.com/stripe-checkout-pro-companion
- * Description:       The Stripe Checkout Pro Companion add-on makes is easy to insert shortcodes into your WordPress editor post and pages.
- * Version:           1.2.7
+ * Description:       The WP Simple Pay Lite Companion add-on makes it easy to insert shortcodes into your WordPress editor post and pages.
+ * Version:           1.2.8
  * Author:            Kyle M. Brown
  * Author URI:        http://kylembrown.com/stripe-checkout-pro-companion
- * Text Domain:       simple-stripe-checkout-companion
+ * Text Domain:       simple-stripe-checout-companion
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
@@ -28,7 +28,7 @@ function stripe_inactive_notice()
 {
 	if ( ! class_exists( 'Stripe_Checkout' ) ) {
 		deactivate_plugins(plugin_basename( __FILE__ ));
-		wp_die( sprintf( __(  'Stripe Checkout Companion requires Simple Stripe Checkout to run properly. Please install Simple Stripe Checkout before activating this plugin. <a href="%s">Return to Plugins</a>'), get_admin_url( '', 'plugins.php') ) );
+		wp_die( sprintf( __(  'WP Simple Pay Lite Companion requires WP Simple Pay Lite to run properly. Please install WP Simple Pay Lite before activating this plugin. <a href="%s">Return to Plugins</a>'), get_admin_url( '', 'plugins.php') ) );
 	}
 }
 
@@ -46,9 +46,9 @@ function install_stripe_companion(){
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sscc_plugin_action_links' );
 
 function sscc_plugin_action_links( $links ) {
-   $links[] = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=gpaisr') ) .'">Settings</a>';
   $links[] = '<a href="http://www.kylembrown.com/stripe-checkout-pro-companion-help?utm_source=wordpress_org&utm_medium=plugin_upgrade_link&utm_campaign=simple_stripe_checkout_companion" target="_blank">Help</a>'; 
   $links[] = '<a href="http://www.kylembrown.com/stripe-checkout-pro-companion?utm_source=wordpress_org&utm_medium=plugin_upgrade_link&utm_campaign=simple_stripe_checkout_companion" target="_blank">Upgrade to Pro</a>';
+$links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/stripe-checkouts" target="_blank">Rate this add-on!</a>';
    return $links;
 }
 
